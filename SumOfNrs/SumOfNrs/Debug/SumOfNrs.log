@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\alexandra\documents\visual studio 2017\projects\sumofnrs\sumofnrs\source.cpp(12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alexandra\documents\visual studio 2017\projects\sumofnrs\sumofnrs\source.cpp(48): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+c:\users\alexandra\documents\visual studio 2017\projects\sumofnrs\sumofnrs\source.cpp(19): warning C4172: returning address of local variable or temporary: arr
+  SumOfNrs.vcxproj -> c:\users\alexandra\documents\visual studio 2017\Projects\SumOfNrs\Debug\SumOfNrs.exe
+  SumOfNrs.vcxproj -> c:\users\alexandra\documents\visual studio 2017\Projects\SumOfNrs\Debug\SumOfNrs.pdb (Partial PDB)
