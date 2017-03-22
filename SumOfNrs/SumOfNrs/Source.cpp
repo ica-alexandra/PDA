@@ -5,11 +5,11 @@
 
 #define SIZE 100
 
-int* generate_rand_nums() {
+int* generate_rand_nums(int rank) {
 	int i;
 	int arr[SIZE];
 
-	srand(time(NULL));
+	srand(time(NULL) + rank);
 
 	for (i = 0; i < SIZE; i++) {
 		arr[i] = rand() % 1000;
@@ -41,7 +41,7 @@ int main(int argc, char *argv[])
 	if (rank != 0) {
 		start_time = MPI_Wtime();
 		printf("\nProcess %d elements: ", rank);
-		procArr = generate_rand_nums();
+		procArr = generate_rand_nums(rank);
 		int sum = compute_sum(procArr);
 		printf("\nSum is: %d ", sum);
 		end_time = MPI_Wtime();
