@@ -24,7 +24,9 @@ public class RunMe {
 				
 		ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>();
 		ArrayList<ArrayList<Integer>> b = new ArrayList<ArrayList<Integer>>();
-			
+		
+		long startTime = System.currentTimeMillis();
+		
 		Scanner input = null;
 		input = new Scanner(new File("file1.txt"));			
 		while(input.hasNextLine()) {
@@ -68,15 +70,36 @@ public class RunMe {
 		Fir fir3 = new Fir(sharedQueue,a,b,c,3);
 		Fir fir4 = new Fir(sharedQueue,a,b,c,4);
 		
+		Fir fir5 = new Fir(sharedQueue,a,b,c,5);
+		Fir fir6 = new Fir(sharedQueue,a,b,c,6);
+		Fir fir7 = new Fir(sharedQueue,a,b,c,7);
+		Fir fir8 = new Fir(sharedQueue,a,b,c,8);
+		Fir fir9 = new Fir(sharedQueue,a,b,c,9);
+		Fir fir10 = new Fir(sharedQueue,a,b,c,10);
+		
 		fir1.start();
 		fir2.start();
 		fir3.start();
 		fir4.start();
 		
+		fir5.start();
+		fir6.start();
+		fir7.start();
+		fir8.start();
+		fir9.start();
+		fir10.start();
+				
 		fir1.join();
 		fir2.join();
 		fir3.join();
 		fir4.join();
+		
+		fir5.join();
+		fir6.join();
+		fir7.join();
+		fir8.join();
+		fir9.join();
+		fir10.join();
 		
 			
 		Writer wr  = new FileWriter("file3.txt");
@@ -87,6 +110,10 @@ public class RunMe {
 			wr.write(" ");
 		}
 		System.out.print("Done!");
+		
+		long endTime   = System.currentTimeMillis();
+		long totalTime = endTime - startTime;
+		System.out.println("\nTotal time: " + totalTime);
 	}
 }
 
