@@ -1,0 +1,8 @@
+﻿  Source.cpp
+d:\pda\sumofnrs\sumofnrs\source.cpp(12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+d:\pda\sumofnrs\sumofnrs\source.cpp(49): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
+d:\pda\sumofnrs\sumofnrs\source.cpp(49): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+d:\pda\sumofnrs\sumofnrs\source.cpp(50): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
+d:\pda\sumofnrs\sumofnrs\source.cpp(19): warning C4172: returning address of local variable or temporary: arr
+  SumOfNrs.vcxproj -> D:\PDA\SumOfNrs\Debug\SumOfNrs.exe
+  SumOfNrs.vcxproj -> D:\PDA\SumOfNrs\Debug\SumOfNrs.pdb (Partial PDB)

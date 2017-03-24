@@ -1,0 +1,4 @@
+﻿  Source.cpp
+c:\users\alexandra\documents\visual studio 2017\projects\matrixmultiplicationsecv\matrixmultiplicationsecv\source.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MatrixMultiplicationSecv.vcxproj -> c:\users\alexandra\documents\visual studio 2017\Projects\MatrixMultiplicationSecv\Debug\MatrixMultiplicationSecv.exe
+  MatrixMultiplicationSecv.vcxproj -> c:\users\alexandra\documents\visual studio 2017\Projects\MatrixMultiplicationSecv\Debug\MatrixMultiplicationSecv.pdb (Partial PDB)
