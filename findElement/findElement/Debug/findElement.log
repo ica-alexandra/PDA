@@ -1,0 +1,6 @@
+﻿  Source.cpp
+c:\users\alexandra\desktop\pda\findelement\findelement\source.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\alexandra\desktop\pda\findelement\findelement\source.cpp(35): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\alexandra\desktop\pda\findelement\findelement\source.cpp(35): note: placeholders and their parameters expect 1 variadic arguments, but 2 were provided
+  findElement.vcxproj -> C:\Users\Alexandra\Desktop\PDA\findElement\Debug\findElement.exe
+  findElement.vcxproj -> C:\Users\Alexandra\Desktop\PDA\findElement\Debug\findElement.pdb (Partial PDB)
