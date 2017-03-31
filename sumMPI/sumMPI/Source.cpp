@@ -29,12 +29,15 @@ int main(int argc, char *argv[])
 {
 	int rank, size;
 	int* procArr;
-	double start_time[10], end_time[10];
+	double start_time, end_time;
 
-	for (int i = 0; i < 6; i++) {
+	/*for (int i = 0; i < 6; i++) {
 		start_time[i] = 0;
 		end_time[i] = 0;
-	}
+	}*/
+
+	start_time = 0;
+	end_time = 0;
 
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
@@ -45,15 +48,15 @@ int main(int argc, char *argv[])
 	}
 		
 	if (rank != 0) {
-		start_time[rank] = MPI_Wtime();
-		printf("\nStart time for process %d: %d \n", rank, start_time[rank]);
+		start_time = MPI_Wtime();
+		printf("\nStart time for process %d: %f \n", rank, start_time);
 		printf("\nProcess %d elements: ", rank);
 		procArr = generate_rand_nums(rank);
 		int sum = compute_sum(procArr);
 		printf("\nSum is: %d ", sum);
-		end_time[rank] = MPI_Wtime();
-		printf("\nFinish time for process %d: %d \n", rank, end_time[rank]);	
-		printf("\nTime elapsed for process %d: %d\n", rank, (end_time[rank] - start_time[rank]));
+		end_time = MPI_Wtime();
+		printf("\nFinish time for process %d: %f \n", rank, end_time);	
+		printf("\nTime elapsed for process %d: %f\n", rank, (end_time - start_time));
 	}
 	
 	MPI_Finalize();
