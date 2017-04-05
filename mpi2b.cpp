@@ -8,55 +8,64 @@
 
 int main(int argc, char *argv[])
 {
-	int rank, size, segmentSize, index, found[SIZE], finalFound[SIZE], arr[SIZE], segment[SIZE];
+	int rank, size, segmentSize, index, found[SIZE], finalFound[SIZE + 10], poz;
+	int arr[SIZE], segment[SIZE];
+	bool ok = false;
 
-	srand(time(NULL) + 1);
+	srand(time(NULL));
 
 	MPI_Init(&argc, &argv);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
 	MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+	segmentSize = SIZE / size;
+	if (SIZE % size != 0) {
+		++segmentSize;
+	}
+
+	MPI_Barrier(MPI_COMM_WORLD);
 
 	if (rank == 0) {
 		printf("Array elements are:\n");
 		for (int i = 0; i < SIZE; i++) {
 			arr[i] = rand() % 100;
 			printf("%d, ", arr[i]);
-			finalFound[i] = 0;
+			finalFound[i] = -1;
 		}
+		arr[35] = 95;
+		arr[98] = 95;
 	}
-
-	segmentSize = SIZE / size;
-	if (SIZE % size != 0)
-		++segmentSize;
 
 	MPI_Scatter(arr, segmentSize, MPI_INT, segment, segmentSize, MPI_INT, 0, MPI_COMM_WORLD);
 
-	index = 0;
 	for (int i = 0; i < segmentSize; i++)
 		found[i] = 0;
 
+	index = 0;
 	for (int i = 0; i < segmentSize; i++) {
 		if (segment[i] == KEY) {
-			found[index] = i;
-			index++;
+			found[index++] = i + rank * segmentSize;
 		}
 	}
 
-	MPI_Gather(found, index, MPI_INT, finalFound, SIZE, MPI_INT, 0, MPI_COMM_WORLD);
+	MPI_Gather(found, segmentSize, MPI_INT, finalFound, segmentSize, MPI_INT, 0, MPI_COMM_WORLD);
 
 	if (rank == 0) {
-		if (finalFound[0] == 0)
-			printf("\nThe number wasn`t found\n");
-		else {
-			int poz = 0;
-			printf("Number found on the following positions: ");
-			while (finalFound[poz] != 0)
-				printf("%d, ", finalFound[poz]);
+		for (int i = 0; i < SIZE + 10; i++)
+		if (finalFound[i] > 0)
+			ok = true;
+		if (ok) {
+			printf("\n\nNumber found on the follwing position(s): ");
+			for (int i = 0; i < SIZE + 10; i++)
+			if (finalFound[i] != 0)
+				printf("%d ", finalFound[i]);
 		}
+
+
 	}
 
 
 	MPI_Finalize();
-
+	return 0;
 }
 
