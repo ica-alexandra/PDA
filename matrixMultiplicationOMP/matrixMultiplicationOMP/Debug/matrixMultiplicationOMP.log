@@ -1,4 +1,2 @@
-﻿  Source.cpp
-c:\users\alexandra\documents\visual studio 2017\projects\matrixmultiplicationomp\matrixmultiplicationomp\source.cpp(15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  matrixMultiplicationOMP.vcxproj -> c:\users\alexandra\documents\visual studio 2017\Projects\matrixMultiplicationOMP\Debug\matrixMultiplicationOMP.exe
-  matrixMultiplicationOMP.vcxproj -> c:\users\alexandra\documents\visual studio 2017\Projects\matrixMultiplicationOMP\Debug\matrixMultiplicationOMP.pdb (Partial PDB)
+﻿  matrixMultiplicationOMP.vcxproj -> C:\Users\Alexandra\Desktop\PDA\matrixMultiplicationOMP\Debug\matrixMultiplicationOMP.exe
+  matrixMultiplicationOMP.vcxproj -> C:\Users\Alexandra\Desktop\PDA\matrixMultiplicationOMP\Debug\matrixMultiplicationOMP.pdb (Partial PDB)

@@ -1,0 +1,7 @@
+﻿  Source.cpp
+Source.cpp(12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating code
+c:\users\alexandra\desktop\pda\summpi\summpi\source.cpp(19): warning C4172: returning address of local variable or temporary: arr
+  All 8 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  sumMPI.vcxproj -> C:\Users\Alexandra\Desktop\PDA\sumMPI\x64\Release\sumMPI.exe

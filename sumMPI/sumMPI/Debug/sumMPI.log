@@ -1,8 +1,5 @@
 ﻿  Source.cpp
 c:\users\alexandra\desktop\pda\summpi\summpi\source.cpp(12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\alexandra\desktop\pda\summpi\summpi\source.cpp(52): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
-c:\users\alexandra\desktop\pda\summpi\summpi\source.cpp(58): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
 c:\users\alexandra\desktop\pda\summpi\summpi\source.cpp(19): warning C4172: returning address of local variable or temporary: arr
-  LINK : C:\Users\Alexandra\Desktop\PDA\sumMPI\Debug\sumMPI.exe not found or not built by the last incremental link; performing full link
   sumMPI.vcxproj -> C:\Users\Alexandra\Desktop\PDA\sumMPI\Debug\sumMPI.exe
   sumMPI.vcxproj -> C:\Users\Alexandra\Desktop\PDA\sumMPI\Debug\sumMPI.pdb (Partial PDB)
